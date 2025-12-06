@@ -11,6 +11,7 @@ def count_char(text):
             dict_char[char] += 1
     return dict_char
 
+# This function needs refactoring.
 def result(dict):
     char_list = [{"char": char, "num": count} for char, count in dict.items()]
 
