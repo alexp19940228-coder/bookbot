@@ -1,3 +1,6 @@
+fram stats import number_of_words
+
+
 def main():
     the_book = "./books/frankenstein.txt"
     text = get_book_text(the_book)
@@ -7,10 +10,6 @@ def main():
 def get_book_text(book):
     with open(book) as f:
         return f.read()
-
-def number_of_words(text):
-    text_list = text.split()
-    return len(text_list)
 
 
 main()
