@@ -10,3 +10,16 @@ def count_char(text):
         else:
             dict_char[char] += 1
     return dict_char
+
+def result(dict):
+    char_list = [{"char": char, "num": count} for char, count in dict.items()]
+
+    def get_num(dictionary):
+        return dictionary["num"]
+
+    char_list.sort(key=get_num, reverse = True)
+    
+
+    return char_list
+
+
