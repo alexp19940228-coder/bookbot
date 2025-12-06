@@ -1,4 +1,4 @@
-fram stats import number_of_words
+from stats import number_of_words
 
 
 def main():
