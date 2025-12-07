@@ -11,16 +11,27 @@ def count_char(text):
             dict_char[char] += 1
     return dict_char
 
-# This function needs refactoring.
-def result(dict):
-    char_list = [{"char": char, "num": count} for char, count in dict.items()]
+def help_num(text):
+    return text["num"]
 
-    def get_num(dictionary):
-        return dictionary["num"]
+#takes a dict and return a sorted list
+#in the sorted list there is two dicts. each dict should have two key-value pairs, e.g {"char": "a", "num": 5}
+#use .sort() to sort from greatest to least
 
-    char_list.sort(key=get_num, reverse = True)
+def result(num_char_dict):
+    sorted_list = []
+    for d in num_char_dict:
+        if d.isalpha() == True:
+            entry = {
+                "char": d,
+                "num": num_char_dict[d]
+            }
+            sorted_list.append(entry)
+    sorted_list.sort(key=help_num, reverse=True)
+    return sorted_list
+
+
     
 
-    return char_list
 
 
